@@ -86,8 +86,8 @@ class Comment(db.Model):
     parent_post = relationship("BlogPost", back_populates="comments")
 
 
-# with app.app_context():
-#     db.create_all()
+with app.app_context():
+     db.create_all()
 
 
 # Decorator to give access only to an admin user (id=1).
